@@ -9,6 +9,7 @@ class CalculatePointController extends Controller
 {
     public function calcPoint(Request $request)
     {
-        echo CalculatePointService::calcPoint($request->input('amount'));
+        $response = CalculatePointService::calcPoint($request->input('amount'));
+        return response()->json(['result' => $response]);
     }
 }
