@@ -18,3 +18,5 @@ Route::get('/', function () {
 Route::get('/hello', function (Request $request) {
     return "test";
 });
+
+Route::get('/calculate/point', 'CalculatePointController@calcPoint');
